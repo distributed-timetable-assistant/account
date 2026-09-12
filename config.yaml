@@ -1,0 +1,14 @@
+# APP_LISTEN_ADDR="0.0.0.0:8081"
+listen_addr: "0.0.0.0:8081"
+
+auth:
+  # Header name set by ingress-nginx from oauth2-proxy auth response.
+  # This value is injected by the trusted edge only and must never be
+  # accepted directly from an untrusted client.
+  # Example: APP__AUTH__PRINCIPAL_HEADER=X-Auth-Request-User
+  principal_header: "X-Auth-Request-User"
+
+kratos:
+  # Internal cluster URL for the Ory Kratos Admin API.
+  # Example: APP_KRATOS__ADMIN_URL=http://kratos:4434
+  admin_url: "http://127.0.0.1:4434"
